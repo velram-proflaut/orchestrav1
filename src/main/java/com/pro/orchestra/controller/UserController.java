@@ -5,6 +5,7 @@ import com.pro.orchestra.dto.UserProfileResponse;
 import com.pro.orchestra.dto.UserResponse;
 import com.pro.orchestra.service.UserService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +29,7 @@ public class UserController {
     }
 
     @GetMapping("/me")
+    @SecurityRequirement(name = "bearerAuth")
     public UserProfileResponse me() {
         return userService.getCurrentUser();
     }

@@ -49,7 +49,9 @@ public class SecurityConfig {
                                 "/auth/login",
                                 "/users/create",
                                 "/swagger-ui/**",
-                                "/v3/api-docs/**"
+                                "/v3/api-docs/**",
+                                "/actuator/health",
+                                "/actuator/info"
                         )
 
                         .permitAll()

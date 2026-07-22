@@ -5,6 +5,7 @@ import com.pro.orchestra.dto.StartProcessResponse;
 import com.pro.orchestra.dto.WorkflowDefinitionResponse;
 import com.pro.orchestra.entity.WorkflowProcess;
 import com.pro.orchestra.service.WorkflowService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.MediaType;
@@ -21,6 +22,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/workflow")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearerAuth")
 public class WorkflowController {
 
     private final WorkflowService workflowService;
