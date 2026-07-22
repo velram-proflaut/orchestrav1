@@ -1,0 +1,3 @@
+CREATE SEQUENCE IF NOT EXISTS workflow_business_key_seq
+START WITH 1
+INCREMENT BY 1;
