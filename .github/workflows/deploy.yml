@@ -34,14 +34,14 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -t velramproflau/orchestra:${{ github.sha }} \
-            -t velramproflau/orchestra:latest \
+            -t velramproflaut/orchestra:${{ github.sha }} \
+            -t velramproflaut/orchestra:latest \
             .
 
       - name: Push Docker image
         run: |
-          docker push velramproflau/orchestra:${{ github.sha }}
-          docker push velramproflau/orchestra:latest
+          docker push velramproflaut/orchestra:${{ github.sha }}
+          docker push velramproflaut/orchestra:latest
 
       - name: Deploy to server
         env:
